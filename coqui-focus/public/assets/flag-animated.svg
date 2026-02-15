@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <!-- Animated waving effect -->
+    <linearGradient id="wave1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <animate attributeName="x1" from="0%" to="100%" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="x2" from="100%" to="200%" dur="3s" repeatCount="indefinite"/>
+      <stop offset="0%" style="stop-color:#fff;stop-opacity:0.2"/>
+      <stop offset="50%" style="stop-color:#fff;stop-opacity:0"/>
+      <stop offset="100%" style="stop-color:#fff;stop-opacity:0.2"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Flag background -->
+  <rect width="200" height="200" fill="#fff"/>
+  
+  <!-- Red stripes with wave animation -->
+  <g>
+    <rect y="0" width="200" height="30.77" fill="#EF3340">
+      <animate attributeName="height" values="30.77;32;30.77" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <rect y="61.54" width="200" height="30.77" fill="#EF3340">
+      <animate attributeName="height" values="30.77;32;30.77" dur="2s" begin="0.3s" repeatCount="indefinite"/>
+    </rect>
+    <rect y="123.08" width="200" height="30.77" fill="#EF3340">
+      <animate attributeName="height" values="30.77;32;30.77" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+    </rect>
+    <rect y="184.62" width="200" height="15.38" fill="#EF3340">
+      <animate attributeName="height" values="15.38;17;15.38" dur="2s" begin="0.9s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  
+  <!-- Blue triangle -->
+  <polygon points="0,0 83.33,100 0,200" fill="#00A6D6"/>
+  
+  <!-- Star with glow -->
+  <defs>
+    <filter id="starGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <polygon points="33.33,78.33 38.33,93.33 53.33,93.33 41.67,102.5 45.83,117.5 33.33,109.17 20.83,117.5 25,102.5 13.33,93.33 28.33,93.33" 
+           fill="#fff" filter="url(#starGlow)">
+    <animate attributeName="opacity" values="1;0.8;1" dur="3s" repeatCount="indefinite"/>
+  </polygon>
+  
+  <!-- Shine overlay -->
+  <rect width="200" height="200" fill="url(#wave1)" opacity="0.3"/>
+</svg>

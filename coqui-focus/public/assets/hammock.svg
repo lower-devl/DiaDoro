@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Hammock for Break Mode -->
+  <defs>
+    <linearGradient id="fabric1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2E8B57"/>
+      <stop offset="100%" style="stop-color:#1a5232"/>
+    </linearGradient>
+    <linearGradient id="fabric2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#EF3340"/>
+      <stop offset="100%" style="stop-color:#b91c1c"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Left Tree -->
+  <rect x="5" y="10" width="8" height="90" fill="#5d4037" rx="2"/>
+  <circle cx="9" cy="15" r="12" fill="#2E8B57" opacity="0.8"/>
+  <circle cx="2" cy="20" r="10" fill="#2E8B57" opacity="0.8"/>
+  <circle cx="16" cy="20" r="10" fill="#2E8B57" opacity="0.8"/>
+  
+  <!-- Right Tree -->
+  <rect x="87" y="10" width="8" height="90" fill="#5d4037" rx="2"/>
+  <circle cx="91" cy="15" r="12" fill="#2E8B57" opacity="0.8"/>
+  <circle cx="84" cy="20" r="10" fill="#2E8B57" opacity="0.8"/>
+  <circle cx="98" cy="20" r="10" fill="#2E8B57" opacity="0.8"/>
+  
+  <!-- Hammock Ropes -->
+  <line x1="13" y1="25" x2="30" y2="50" stroke="#8d6e63" stroke-width="2"/>
+  <line x1="87" y1="25" x2="70" y2="50" stroke="#8d6e63" stroke-width="2"/>
+  
+  <!-- Hammock Fabric -->
+  <path d="M 30 50 Q 50 80 70 50 Q 70 65 50 75 Q 30 65 30 50" fill="url(#fabric1)"/>
+  <path d="M 30 50 Q 50 80 70 50" fill="none" stroke="url(#fabric2)" stroke-width="4" stroke-dasharray="8,4"/>
+  
+  <!-- Pattern -->
+  <circle cx="40" cy="62" r="3" fill="#fff" opacity="0.6"/>
+  <circle cx="50" cy="68" r="3" fill="#fff" opacity="0.6"/>
+  <circle cx="60" cy="62" r="3" fill="#fff" opacity="0.6"/>
+</svg>

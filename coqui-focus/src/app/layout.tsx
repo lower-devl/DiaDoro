@@ -62,7 +62,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="Coquí Focus" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[url('/assets/taino-pattern-bg.svg')] bg-cover bg-center bg-fixed bg-no-repeat`}
       >
         {children}
       </body>

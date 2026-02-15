@@ -2,6 +2,7 @@
 
 import { useTimerStore, TimerMode } from '@/store/useTimerStore';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 interface CircularProgressProps {
   size?: number;
@@ -12,6 +13,12 @@ const MODE_COLORS: Record<TimerMode, { primary: string; secondary: string }> = {
   pomodoro: { primary: '#EF3340', secondary: '#00A6D6' },
   shortBreak: { primary: '#2E8B57', secondary: '#00A6D6' },
   longBreak: { primary: '#2E8B57', secondary: '#00A6D6' },
+};
+
+const MODE_ICONS: Record<TimerMode, string> = {
+  pomodoro: '/assets/pava-hat.svg',
+  shortBreak: '/assets/hammock.svg',
+  longBreak: '/assets/hammock.svg',
 };
 
 export function CircularProgress({ size = 320, strokeWidth = 12 }: CircularProgressProps) {
@@ -78,6 +85,19 @@ export function CircularProgress({ size = 320, strokeWidth = 12 }: CircularProgr
           )}
         />
       </svg>
+      
+      {/* Mode Icon in Center */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="w-16 h-16 sm:w-20 sm:h-20 opacity-20 dark:opacity-10">
+          <Image
+            src={MODE_ICONS[mode]}
+            alt=""
+            width={80}
+            height={80}
+            className="w-full h-full"
+          />
+        </div>
+      </div>
     </div>
   );
 }

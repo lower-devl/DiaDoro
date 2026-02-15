@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600">
+  <defs>
+    <linearGradient id="flagShine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff;stop-opacity:0.3" />
+      <stop offset="50%" style="stop-color:#fff;stop-opacity:0" />
+      <stop offset="100%" style="stop-color:#000;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- White Background -->
+  <rect width="900" height="600" fill="#fff"/>
+  
+  <!-- Red Stripes -->
+  <rect y="0" width="900" height="92.31" fill="#EF3340"/>
+  <rect y="184.62" width="900" height="92.31" fill="#EF3340"/>
+  <rect y="369.23" width="900" height="92.31" fill="#EF3340"/>
+  <rect y="553.85" width="900" height="46.15" fill="#EF3340"/>
+  
+  <!-- Blue Triangle -->
+  <polygon points="0,0 375,300 0,600" fill="#00A6D6"/>
+  
+  <!-- Star -->
+  <polygon points="150,235 165,280 210,280 175,310 187,355 150,330 113,355 125,310 90,280 135,280" fill="#fff"/>
+  
+  <!-- Subtle Wave Effect Overlay -->
+  <path d="M0,0 Q225,50 450,0 T900,0 L900,600 Q675,550 450,600 T0,600 Z" fill="url(#flagShine)" opacity="0.3"/>
+</svg>
