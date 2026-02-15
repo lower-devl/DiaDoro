@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Background } from "@/components/Layout/Background";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -62,8 +63,9 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="Coquí Focus" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[url('/assets/taino-pattern-bg.svg')] bg-cover bg-center bg-fixed bg-no-repeat`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Background />
         {children}
       </body>
     </html>
